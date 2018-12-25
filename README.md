@@ -2,7 +2,8 @@
 Console based, Menu Driven, Driver for testing various HyperGrid API's. 
 
 ##  Requirements ##
-    Python 2.7.15 or lower . The default on most OS's today
+    Windows   - Python 2.7.0 - 2.7.15.
+    Linux/Mac - Python 2.7.9 - 2.7.15. - The default on most OS's today
 
 ##  Usage ##
     > git clone https://github.com/suntosh/ninjutsu.git ninjutsu
