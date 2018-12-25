@@ -10,9 +10,10 @@ def main():
 	objects = { "1" : GetBlueprints(), "2" : GetApps()}
 	var ="0"
 	while True:
+		print("##############################################################\n\r")
 		for key in apis:
 			print key," ",apis[key]
-		var = raw_input("Please enter a number\n\r")
+		var = raw_input("\n.................Please enter your choice\n\r")
 		if var not in apis.keys():
 			print "Invalid Selection.. Exiting"
 			break
