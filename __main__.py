@@ -23,4 +23,8 @@ def main():
 if __name__ == "__main__":
 	prints = GetApps()
 	prints.fetch()
+	prints = GetBlueprints()
+	prints.fetch()
+		
+
 	#main()
