@@ -12,7 +12,7 @@ def main():
 		print("##############################################################\n\r")
 		for key in apis:
 			print key," ",apis[key].Name
-		choice = raw_input("\n.................Please enter your choice\n\r")
+		choice = raw_input("\n.................Please enter a valid choice\n\r")
 		if choice not in apis.keys():
 			print "Invalid Selection.. Exiting"
 			break
@@ -21,7 +21,7 @@ def main():
 				apis[choice].fetch()
 				continue
 			except StandardError:
-				print "Make sure you are connect to the internet"
+				print "Appears your internet is down. Fix internet and try again"
 				exit(0)
 
 if __name__ == "__main__":
