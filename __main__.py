@@ -4,8 +4,8 @@ from actions.GetBlueprints import GetBlueprints
 import sys
 
 def main():
-	if sys.version_info > (2, 7, 17):
-		raise Exception ("Only python version 2.7.17 or lower supported")
+	if not sys.version_info[0] == 2 and sys.version.info[1] == 7:
+		raise Exception ("Only python version 2.7.x supported")
 	apis = { "1" : GetBlueprints(), "2" : GetApps()}
 	choice ="0"
 	while True:
@@ -20,8 +20,8 @@ def main():
 			try:
 				apis[choice].fetch()
 				continue
-			except StandardError:
-				print "Appears your internet is down. Fix internet and try again"
+			except StandardError as err:
+				print str(err),"Appears your internet is down. Fix internet and try again"
 				exit(0)
 
 if __name__ == "__main__":

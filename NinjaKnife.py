@@ -16,8 +16,6 @@ class NinjaKnife():
 	def fetch(self, params = ""):
 		self.params = params
 		conn = httplib.HTTPSConnection(globals.SERVER_URL) 
-		conn._context.check_hostname = False 
-		conn._context.verify_mode = ssl.CERT_NONE
 		headers = {}
 		headers["Authorization"] = "Basic %s" % base64.standard_b64encode(globals.PASS_PHRASE)
 		req = conn.request(self.method, self.apiurl, headers=headers)
