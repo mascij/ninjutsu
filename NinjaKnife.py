@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 import globals
 import httplib
-import httplib
 import json
 import base64
 import ssl
 
 class NinjaKnife():
-	Get     =	"GET"
-	Post 	=   "POST"
+	Get  =  "GET"
+	Post =  "POST"
 
 	def __init__( self, method, apiurl):
 		self.method = method

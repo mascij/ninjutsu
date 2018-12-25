@@ -4,11 +4,23 @@ from actions.GetBlueprints import GetBlueprints
 import sys
 
 def main():
-	print( "Maacho Acc acc cho")
-	apps = GetApps()
-	apps.fetch()
-	if sys.version_info > (2, 7, 15):
-		print ("Only python version 2.7.15 or lower supported")
+	if sys.version_info > (2, 7, 17):
+		raise Exception ("Only python version 2.7.17 or lower supported")
+	apis = { "1" : "Get Blueprints", "2" :"Get Apps"}
+	var ="0"
+	while True:
+		for key in apis:
+			print key," ",apis[key]
+		var = raw_input("Please enter a number\n\r")
+		if var not in apis.keys():
+			print "Invalid Selection.. Exiting"
+			break
+		else:
+			continue
+
+
 
 if __name__ == "__main__":
-	main()
+	prints = GetApps()
+	prints.fetch()
+	#main()
