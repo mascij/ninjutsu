@@ -26,7 +26,7 @@ class NinjaKnife():
 			parsed = json.loads( res.read())
 			print json.dumps(parsed, indent=4, sort_keys=True)
 		else:
-			print res.status, "Error returned to in Response to the Request sent"
+			print res.status, "Error returned in Response to the Request sent"
 		
 	
 
