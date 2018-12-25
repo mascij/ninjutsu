@@ -8,5 +8,5 @@ class GetApps(NinjaKnife):
 		NinjaKnife.__init__(self, NinjaKnife.Get, globals.GET_APPS )
 
 	def fetch(self):
-		NinjaKnife.fetch(self, self.__class__.__name__)
+		NinjaKnife.fetch(self)
 
