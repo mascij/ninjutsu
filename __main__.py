@@ -17,8 +17,12 @@ def main():
 			print "Invalid Selection.. Exiting"
 			break
 		else:
-			apis[choice].fetch()
-			continue
+			try:
+				apis[choice].fetch()
+				continue
+			except StandardError:
+				print "Make sure you are connect to the internet"
+				exit(0)
 
 if __name__ == "__main__":
 	main()
