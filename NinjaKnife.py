@@ -12,7 +12,7 @@ class NinjaKnife():
 	def __init__( self, method, apiurl):
 		self.method = method
 		self.apiurl = apiurl
-
+		
 	def fetch(self, params = ""):
 		self.params = params
 		conn = httplib.HTTPSConnection(globals.SERVER_URL) 
@@ -28,3 +28,6 @@ class NinjaKnife():
 		else:
 			print res.status, "Error returned to in Response to the Request sent"
 		
+	
+
+
