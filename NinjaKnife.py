@@ -2,10 +2,9 @@ import globals
 import httplib
 import urllib
 
-
 class NinjaKnife():
-	Get     =	"GET"
-	Post 	=   "POST"
+	Get  =  "GET"
+	Post =  "POST"
 
 	def __init__( self, method, apiurl):
 		self.method = method
