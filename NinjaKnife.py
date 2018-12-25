@@ -4,6 +4,7 @@ import httplib
 import json
 import base64
 import ssl
+import sys
 
 class NinjaKnife():
 	Get  =  "GET"
@@ -16,6 +17,9 @@ class NinjaKnife():
 	def fetch(self, params = ""):
 		self.params = params
 		conn = httplib.HTTPSConnection(globals.SERVER_URL) 
+		if sys.version_info >= (2,7,9):
+			conn._context.check_hostname = False 
+			conn._context.verify_mode = ssl.CERT_NONE
 		headers = {}
 		headers["Authorization"] = "Basic %s" % base64.standard_b64encode(globals.PASS_PHRASE)
 		req = conn.request(self.method, self.apiurl, headers=headers)

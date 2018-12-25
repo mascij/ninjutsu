@@ -1,6 +1,5 @@
 from actions.GetApps import GetApps
 from actions.GetBlueprints import GetBlueprints
-
 import sys
 
 def main():
