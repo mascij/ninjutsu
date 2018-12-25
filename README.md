@@ -1,4 +1,4 @@
-# *N*injutsu
+# *Ninjutsu*
 Console based, Menu Driven, Driver for testing various HyperGrid API's.
 
 # Requirements 
