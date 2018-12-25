@@ -1,7 +1,7 @@
 #server url
 SERVER_URL="ninja.skygrid.cloud"
 
-# Keys 
+# Keys - AccessKey:SecretKey
 PASS_PHRASE="kHU2oPHTpjOBtea5ayVM:JtNp2lyIiGfeurkRFOJUD4GtrpYV3FVUN4DRlCVF"
 
 # URL to get list of Blueprints
