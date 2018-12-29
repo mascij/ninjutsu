@@ -15,17 +15,17 @@ def main():
 		for key in apis:
 			print key," ",apis[key].Name
 		try:
-			choice = int(raw_input("\n.................Please enter a valid choice\n\r"))
+			choice = int(raw_input("\nEnter option 1 - 4 : "))
 			if choice not in apis.keys():
 				raise ValueError()
 			if choice == 4:
-				id = (raw_input("\nEnter the Blueprint id to delete\n\r"))
+				id = (raw_input("Enter the Blueprint id to delete : "))
 				apis[choice].fetch(id)
 			else:
 				apis[choice].fetch()
 			continue
 		except ValueError as err:
-			print "Invalid choice or bad entry ... exiting.."
+			print "Invalid option or bad entry ... exiting.."
 		except StandardError as err:
 			print str(err),"Appears your internet is down. Fix internet and try again"
 		exit(0)
